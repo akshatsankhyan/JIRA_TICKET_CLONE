@@ -1,0 +1,261 @@
+* {
+    box-sizing: border-box;
+}
+
+body{
+    margin: 0;
+    padding: 0;
+}
+
+.toolbox-cont{
+    height: 5rem;
+    background-color: #3d3d3d;
+    display: flex;
+    align-items: center ;
+
+}
+.toolbox-cont > *{
+    margin-left: 4rem;
+    border-radius: 8px;
+}
+.toolbox-priority-cont{
+    height: 4rem;
+    width: 40%;
+    background-color: #4b4b4b;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+
+}
+
+.toolbox-priority-cont > *:hover{
+  border: solid red;
+}
+.color {
+    height: 2rem;
+    width: 15%;
+    border-radius: 4px;
+
+}
+.action-btn-cont{
+    height: 4rem;
+    width: 15%;
+    background-color: #4b4b4b;
+    display: flex;
+    /* position: relative;
+    left: 100px; */
+}
+.action-btn-cont > *{
+    width: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 2.7rem;
+    color: #a4b0be;
+
+    
+}
+.lightpink {
+   background-color: lightpink;
+}
+.lightblue{
+   background-color: lightskyblue;
+}
+.lightgreen{
+   background-color: lightgreen ;
+}
+.black{
+   background-color: black;
+}
+/* .add-btn:hover{
+    background-color: lightgray;
+}
+.remove-btn:hover{
+    background-color:lightgrey ;
+} */
+.action-btn-cont > *:hover {
+     background-color: cornflowerblue;
+}
+
+.modal-cont{
+    height: 50vh;
+    width: 45vw;
+    background-color: magenta;
+    position: absolute;
+    top: calc( (100vh - 50vh) / 2);
+    left: calc( (100vw - 45vw) / 2);
+    display: none;
+}
+.textarea-cont{
+    height: 100%;
+    width: 75%;
+    background-color:#d2dae2;
+    border: none;
+    outline: none;
+    resize: none;
+    padding: 2rem;
+    font-size: 1.5rem;
+
+}
+.priority-colors-cont{
+    height: 100%;
+    width: 25%;
+    background-color: #3d3d3d;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+}
+.priority-color{
+    height:15% ;
+    width: 60%;
+}
+.border{
+    border: 3px solid #d1d8e0;
+}
+.main-cont{
+    height: calc(100vh - 5rem);
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 2rem;
+    padding: 2rem;
+    background-image: url("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR39RrlpiqFOmqOyiW8QUJ_ivN4Fu5oheGzUQ&usqp=CAU");
+    overflow: scroll;
+}
+.ticket-cont{
+    height: 10rem;
+    width: 18rem;
+    background-color: #f1f2f6;
+}
+.ticket-color{
+    height: 1rem;
+}
+.ticket-id{
+    height: 1.5rem;
+    padding: 0.3rem ;
+    background-color: lightsteelblue;
+}
+.task-area{
+    height: calc(100% - 1.5rem - 1rem - 2rem);
+    padding: 0.3rem;
+    outline: none;
+    background-color: papayawhip;
+}
+.ticket-lock{
+    height: 2rem;
+    font-size: 1.3rem;
+    display: flex;
+    justify-content: end;
+    padding: 0.5rem;
+    color: goldenrod;
+    background-color: lightsteelblue;
+} 
+ 
+/* FOR RESPONSIVE DESIGN */
+@media screen and (min-width: 426px) and (max-width: 768px) {
+    .modal-cont{
+        height: 50vh;
+        width: 65vw;
+        top: calc( (100vh - 55vh) / 2);
+        left: calc( (100vw - 65vw) / 2);
+    }
+    .priority-color{
+        height: 12%;
+        border-radius: 0.2rem;
+    }
+    .toolbox-cont>*{
+        height: 3rem;
+        border-radius: 6px;
+    }
+    .toolbox-priority-cont>*{
+        height: 60%;
+        border-radius: 4px;
+    }
+    .action-btn-cont>*{
+        font-size: 2rem;
+    }
+
+  
+}
+
+@media screen and (max-width: 425px) {
+
+    .modal-cont{
+        height: 37vh;
+        width: 70vw;
+        top: calc( (100vh - 37vh) / 2);
+        left: calc( (100vw - 70vw) / 2);
+        flex-direction: column;
+      
+    }
+    .textarea-cont{
+        width: 100%;
+        height: 82%;
+        font-size: 1.1rem;
+
+    }
+    .priority-colors-cont{
+        flex-direction: row;
+        width: 100%;
+        height: 18%;
+    }
+    .priority-color{
+        width: 15%;
+        height: 50%;
+    }
+    .toolbox-cont > *{
+        margin-left: 1.8rem;
+        height: 3rem;
+    }
+    .toolbox-priority-cont{
+        width: 40%;
+    }
+    .action-btn-cont{
+        width: 30%;
+    }
+    .toolbox-priority-cont > *{
+        height: 1rem;
+        width: 15%;
+        border-radius: 1px;
+    }
+    .action-btn-cont > *{
+        font-size: 1.8rem;
+    }
+
+    .ticket-cont{
+        height: 8rem;
+        width: 12rem;
+    }
+    .ticket-color{
+        height: 0.7rem;
+    }
+    .ticket-id{
+        height: 1.3rem;
+        font-size: 0.7rem;
+        padding: 0.3rem;
+    }
+    .task-area{
+        height: calc(100% - 0.7rem - 1.3rem - 1.2rem);
+        font-size: 0.8rem;
+
+    }
+    .ticket-lock{
+        height: 1.2rem;
+        font-size: 0.9rem;
+        display: flex;
+        justify-content: end;
+        padding: 0.2rem;
+
+    }
+}
+
+
+
+
+  
+
+
+
+
+
